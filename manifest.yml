@@ -1,0 +1,15 @@
+applications:
+# Node.js app
+- name: main_app1
+  memory: 256M
+#  domain: mybluemix.net
+  routes:
+  - route: main_app1.mybluemix.net
+  path: ./node_app/
+# PHP app
+- name: sub_app2
+  memory: 256M
+  routes:
+  - route: main_app1.mybluemix.net/phpapp
+  path: ./php_app/
+
